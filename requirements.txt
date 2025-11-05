@@ -1,0 +1,16 @@
+# FastMCP Framework
+fastmcp>=0.1.0
+
+# OpenAI Integration
+openai>=1.0.0
+
+# FastAPI and Web Framework
+fastapi>=0.104.0
+uvicorn>=0.24.0
+python-multipart>=0.0.6
+
+# Environment and Configuration
+python-dotenv>=1.0.0
+
+# Utilities
+aiofiles>=23.0.0

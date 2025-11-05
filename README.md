@@ -2,6 +2,53 @@
 
 An AI-powered voice agent that receives phone calls through Twilio, processes them with Ultravox for real-time voice interaction, and uses OpenAI for intelligent responses.
 
+## 🆕 Python MCP Server Implementation
+
+This repository now includes a **Python-based MCP (Model Context Protocol) server** implementation! The MCP server exposes Twilio calling capabilities as MCP tools and resources, making it easy to integrate with any MCP-compatible client.
+
+**See [README_PYTHON_MCP.md](./README_PYTHON_MCP.md) for complete Python MCP server documentation.**
+
+### Quick Start (Python MCP)
+
+```bash
+# Install Python dependencies
+pip install -r requirements.txt
+
+# Configure environment
+cp .env.example .env
+# Edit .env with your API keys
+
+# Start the MCP server
+python twilio_webhook.py
+```
+
+The Python MCP server provides:
+- **MCP Tools**: Conversation history management, active call tracking, log retrieval
+- **MCP Resources**: Access to conversation logs and active calls
+- **Twilio Webhooks**: Full call handling with OpenAI integration
+- **FastMCP Framework**: Easy integration with MCP clients
+
+---
+
+## Implementations
+
+This repository contains two implementations:
+
+1. **TypeScript/Node.js (Original)**: Uses Express, Ultravox, and OpenAI for real-time voice interactions
+2. **Python MCP Server (New)**: Uses FastMCP to expose calling capabilities via Model Context Protocol
+
+| Feature | TypeScript | Python MCP |
+|---------|-----------|------------|
+| Twilio Integration | ✅ | ✅ |
+| OpenAI LLM | ✅ | ✅ |
+| Real-time Voice | Ultravox | Native Twilio |
+| MCP Protocol | ❌ | ✅ |
+| WebSocket Support | ✅ | ❌ |
+| Conversation Logging | ✅ | ✅ |
+| Tool Exposure | ❌ | ✅ (MCP Tools) |
+
+Choose TypeScript for Ultravox real-time voice streaming, or Python MCP for integration with MCP-compatible clients and agents.
+
 ## Features
 
 - **Twilio Integration**: Receives and handles incoming phone calls
